@@ -44,7 +44,7 @@ function WeatherApp() {
   
 const GetWeather = (e) => {
   if (e.key === "Enter") {
-    fetch(`${api.base}weather?q=${location}&appid=${api.key}`)
+    fetch(`${api.base}weather?q=${location}&units=metric&appid=${api.key}`)
           .then((res) => res.json())
           .then((result) => {
             setWeather(result);
